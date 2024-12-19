@@ -8,9 +8,9 @@ az group create --name myResourceGroup --location eastus2
 ```
 
 2. Create cluster
-> --enable-addons azure-keyvault-secrets-provider will create a SP in the infra RG + deploy the required PODS to the cluster.
->  --enable-oidc-issuer =  Enables OIDC issuer which allows AAD to discover the API server's public signing keys.
-> --enable-workload-identity = Allows AAD to trust ID tokens created by AKS which allows PODs to access Azure resources without the need for Application credentials.
+> * --enable-addons azure-keyvault-secrets-provider will create a SP in the infra RG + deploy the required PODS to the cluster.
+> * --enable-oidc-issuer =  Enables OIDC issuer which allows AAD to discover the API server's public signing keys.
+> * --enable-workload-identity = Allows AAD to trust ID tokens created by AKS which allows PODs to access Azure resources without the need for Application credentials.
 ```
 az aks create --name myAKSCluster --resource-group myResourceGroup --enable-addons azure-keyvault-secrets-provider --enable-oidc-issuer --enable-workload-identity --generate-ssh-keys --node-count 1
 ```
