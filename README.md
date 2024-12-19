@@ -1,7 +1,12 @@
-# https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver
+# Setup AKS to retreive secrets from Azure Key Vault using Service Connector
 
-# Create RG
+? Taken from: https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver
+
+Create RG
+
+```
 az group create --name myResourceGroup --location eastus2
+```
 
 # Create cluster
 # --enable-addons azure-keyvault-secrets-provider will create a SP in the infra RG + deploy the required PODS to the cluster.
