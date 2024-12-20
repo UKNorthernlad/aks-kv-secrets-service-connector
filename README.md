@@ -84,7 +84,7 @@ az aks connection create keyvault --connection kv25ServiceConnection --resource-
 
 > Original samples taken from https://github.com/Azure-Samples/serviceconnector-aks-samples.git in the "azure-keyvault-csi-provider" folder.
 
-11. Deploy the sample CSI configuration and POD app:
+11. Update the ./secret_provider_class.yaml file with the tentanID & userAssignedIdentityID which where both obtained earlier. Deploy the sample CSI configuration and POD app:
 ```
 kubectl apply -f ./secret_provider_class.yaml
 kubectl apply -f ./pod.yaml
